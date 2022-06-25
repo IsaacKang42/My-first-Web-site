@@ -4,15 +4,8 @@
 <head>
   <title>CSS 제작 공부</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="1.css">
   <style>
-    a {
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #66023C;
-    }
-
     h1 {
       font-size: 60px;
       border-bottom: solid 1px;
@@ -20,23 +13,15 @@
       margin: 0%
     }
 
-    h1:hover {
-      color: gray;
-    }
 
     h2 {
       margin-top: 6%;
     }
 
     #otherlinks {
-      font-size: 30px;
-      border-right: 1px solid;
+      font-size: 25px;
       margin: 0%;
       background-color: #f6f6f6;
-    }
-
-    body {
-      margin: 0%;
     }
 
     #makinggrid {
@@ -47,6 +32,7 @@
     .oldmenus {
       color: #000000;
       background-color: #dddddd;
+      border-bottom: solid 1px #a5a5a5;
     }
 
     .oldmenus:hover {
@@ -55,15 +41,49 @@
       font-size: 42px;
     }
 
-    .indextext:hover {
-      font-size: 25px;
+    #index {
+      border: solid 1px;
+      margin-top: 6%;
+      width: 190px;
+      padding: 1%;
+    }
+
+    @media(max-width:960px) {
+      #Description {
+        display: none;
+      }
+
+      #makinggrid {
+        display: block;
+      }
+
+      #otherlinks {
+        border-right: none;
+      }
+
+      h1 {
+        border-bottom: none;
+      }
+
+      .oldmenus {
+        background-color: #ffffff;
+      }
+
+    }
+
+    h2 a {
+      color: #000000;
+    }
+
+    #lorem {
+      margin-top: 142%;
+      font-style: italic;
     }
   </style>
 </head>
 
 <body>
-  <link rel="stylesheet" href="">
-  <a href="#description"><img src="1.jpg" width=100% height="600px"></a>
+  <a href="#CSS.html"><img src="1.jpg" width=100% height="600px"></a>
   <h1 id="web"><span style="margin-left: 14%;"></span><a href="index.html" target="_blank"
       style="color: #000000;">WEB</a></span></h1>
   <div id="makinggrid">
@@ -82,26 +102,36 @@
           <div class="oldmenus">GitHub</div>
         </a>
       </strong>
+      <div id="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deleniti fugiat consectetur impedit non,
+        temporibus tempore autem dolor quidem earum quaerat eius modi laboriosam. At temporibus nemo veniam enim a?
+      </div>
     </div>
-    <div style="margin-left: 6%; margin-right: 6%; margin-bottom: 100%;">
-      <h2 id="description">CSS</h2>
-      종속형 시트 또는 캐스케이딩 스타일 시트(Cascading Style Sheets, CSS)는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어(style sheet language)로, HTML과
-      XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다. 기본 파일명은 style.css이다.
-      <br>마크업 언어(e.g. HTML)가 웹사이트의 몸체를 담당한다면 CSS는 옷과 액세서리처럼 꾸미는 역할을 담당한다고 할 수 있다. 즉, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀 다른
-      웹사이트처럼 꾸밀 수 있다.
-      <br>현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다. 또한 다양한 애니메이션 기능이 추가되어 어도비
-      플래시를
-      어느 정도 대체하고 있다.
-      <div style="border: solid; margin-top: 6%; width: 19%; padding: 1%;">
-        <h2 id="index">목차</h2>
+    <div style="margin-left: 6%; margin-right: 6%; margin-bottom: 50%;">
+      <h2>CSS</h2>
+      <div id="Description">종속형 시트 또는 캐스케이딩 스타일 시트(Cascading Style Sheets, CSS)는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어(style
+        sheet language)로,
+        HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다. 기본 파일명은 style.css이다.
+        <br>마크업 언어(e.g. HTML)가 웹사이트의 몸체를 담당한다면 CSS는 옷과 액세서리처럼 꾸미는 역할을 담당한다고 할 수 있다. 즉, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀
+        다른 웹사이트처럼 꾸밀 수 있다.
+        <br>현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다. 또한 다양한 애니메이션 기능이 추가되어 어도비
+        플래시를 어느 정도 대체하고 있다.
+      </div>
+      <div id="index">
+        <h2>목차</h2>
         <strong>
           <ol>
-            <li class="indextext"><a href="#Basic">기초 사용법</a></li>
-            <li class="indextext"><a href="#BoxModel">박스 모델</a></li>
-            <li class="indextext"><a href="#Grid">그리드</a></li>
-            <li class="indextext"><a href="#Selectors">선택자의 종류</a></li>
-            <li class="indextext"><a href="#Properties">속성과 값의 종류</a></li>
-            <li class="indextext"><a href="#etc">노트</a></li>
+            <li><a href="#Basic">기초 사용법</a></li>
+            <li><a href="#BoxModel">박스 모델</a></li>
+            <li><a href="#Grid">그리드</a></li>
+            <li><a href="#MediaQuery">미디어 쿼리</a></li>
+            <li><a href="#Selectors">선택자의 종류</a></li>
+            <ul>
+              <li><a href="#PseudoClasses">가상 선택자</a></li>
+              <li><a href="#PseudoElements">가상 요소</a></li>
+            </ul>
+            <li><a href="#Properties">속성과 값의 종류</a></li>
+            <li><a href="#etc">노트</a></li>
           </ol>
         </strong>
       </div>
@@ -113,6 +143,13 @@
         </ul>
         <li>style 태그를 head 태그 안쪽에 적고 중괄호를 이용해 디자인을 결정함.</li>
         <li>콜론(:)을 특정 선택자 뒤에 붙여서 가상 선택자(:) 및 가상 요소(::)를 지정할 수 있다. </li>
+        <li>선택자를 띄어쓰기 없이 사용하면(e.g. A B) 앞쪽의 선택자에 해당하는 태그를 부모로 가지는 후자의 선택자만 해당된다. (A를 부모로 가지는 B만 선택.)</li>
+        <li>동일 속성 및 값을 공유하는 선택자는 ',(콤마)'를 이용해서 묶을 수 있음.</li>
+        <li>속성에서 -(하이픈)으로 구분짓는 세부 속성은, CSS에서 띄어쓰기로 구분하여 연속으로 설정할 수 있다.</li>
+        <strong>
+          <li>style 내부의 선택자 및 선언을 복사해서 '*.css' 파일을 만들면 다른 파일에서 'link rel="stylesheet" href=('*.css')' 라인을 통해 같은 CSS 효과를
+            적용할 수 있다.</li>
+        </strong>
       </ul>
       <h2 id="BoxModel"><a href="#index">박스 모델</a></h2>
       <ul>
@@ -123,13 +160,41 @@
         <li>'display:grid;'를 통해 선언하고, grid-template-column 속성을 통해 자식 태그들을 같은 열에 배치할 수 있다. 그 후, 각 자식 태그의 길이를 순서대로 지정할 수
           있으며, px or % 값으로 고정된 길이로, fr 값을 통해 특정 비율로 설정할 수 있다.</li>
       </ul>
+      <h2 id="MediaQuery"><a href="#index">미디어 쿼리</a></h2>
+      <ul>
+        <li>반응형 웹(Responsive Web)을 위해 존재함.</li>
+        <li>(Style 태그 안에)'@media'와 (조건을 표시하는) 소괄호를 이용해 작성.</li>
+        <ul>
+          <li>중괄호를 표시 후 그 안에 선택자와 선언을 이용함. (i.e. 효과 선언 이후에 중괄호를 두 번 닫아야 함.)</li>
+          <ul>
+            <li>e.g. @media(max-widht:960px) {div{display:none;}} = "너비가 960픽셀까지는(i.e. 960픽셀보다 좁으면) 해당 div는 표시되지 않는다."
+            </li>
+          </ul>
+        </ul>
+        <li></li>
+      </ul>
       <h2 id="Selectors"><a href="#index">선택자의 종류</a></h2>
       <ul>
         <li>a</li>
         <li>.(Full stop): 특정 class의 태그를 선택. 일반 선택자보다 우선순위가 높고 뒤에 적을수록 우선순위가 높다.</li>
         <li>#: 특정 id의 태그를 선택. '.(class 선택자)'보다 우선순위가 높다.</li>
-        <li>':hover': 해당 요소에 커서를 가져다 댄 경우를 선택.</li>
-        <li>':active': 해당 요소를 클릭한 경우를 선택.</li>
+      </ul>
+      <ul>
+        <h2 id="PseudoClasses"><a href="#index">가상 선택자</a></h2>
+        <ul>
+          <li>hover: 해당 요소에 커서를 가져다 댄 경우를 선택.</li>
+          <li>active: 해당 요소를 클릭한 경우를 선택.</li>
+          <li>link(visited): 방문한 적이 있는(없는) 요소.</li>
+          <li>first(last): 첫 번째(마지막) 요소. </li>
+          <li>first(last)-child: 첫 번째(마지막) 자식 요소. </li>
+          <li>nth(-last)-child('수열'): 앞에서(뒤에서) ('수열') 번째 자식 요소.</li>
+          <li></li>
+          <li></li>
+        </ul>
+        <h2 id="PseudoElements"><a href="#index">가상 요소</a></h2>
+        <ul>
+          <li></li>
+        </ul>
       </ul>
       <h2 id="Properties"><a href="#index">속성과 값의 종류</a></h2>
       <ul>
@@ -149,13 +214,30 @@
             <li>e.g. 전체 너비가 A라고 했을 때, '100px 1fr 2fr'로 설정하면, 100px, (A-100px)*1/3, (A-100px)*2/3가 된다.</li>
           </ul>
         </ul>
+        <strong>
+          <li>rel: link 태그를 이용해 stylesheet 값을 주고, href 속성으로 원하는 CSS 파일을 불러와서 효과를 적용할 수 있다.</li>
+        </strong>
+        <li>
+          list-style: 불릿(bullet, 글머리 기호)의 모양을 변경.
+          <ul>
+            <li>upper(lower)-roman: 로마 숫자 대문자(소문자).</li>
+            <li>upper(lower)-alpha: 알파벳 대문자(소문자).</li>
+            <li>disc: 점.</li>
+            <li>dics: 원.</li>
+            <li>square: 사각형.</li>
+            <li>decimal: 십진수 숫자.</li>
+            <ul>
+              <li>-leading-zero: 01로 시작하는 십진수.</li>
+            </ul>
+            <li>none: 표시 없음.</li>
+          </ul>
+        </li>
       </ul>
       <h2 id="etc"><a href="#index">노트</a></h2>
       <ul>
         <li>block level element와 inline element 차이를 이해하고 적절히 사용하기.</li>
         <li>&lt;!----&gt;(HTLM), /**/(CSS)를 이용하여 주석 달기. </li>
-        <li>동일 속성 및 값을 공유하는 선택자는 ',(콤마)'를 이용해서 묶을 수 있음.</li>
-        <li>속성에서 -(하이픈)으로 구분짓는 세부 속성은, CSS에서 띄어쓰기로 구분하여 연속으로 설정할 수 있다.</li>
+        <li>웹 페이지의 캐시는 CSS 파일을 미리 다운로드해서 다른 파일의 로딩 속도를 향상시키는 데 사용한다.</li>
       </ul>
     </div>
   </div>
